@@ -1,6 +1,6 @@
 import datetime
 from django.contrib import admin
-
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 
@@ -26,3 +26,13 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     def __str__(self):
         return self.choice_text
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    avatar = models.ImageField(default='default.jpg', upload_to='profile_images')
+    bio = models.TextField()
+
+    def __str__(self):
+        return self.user.username

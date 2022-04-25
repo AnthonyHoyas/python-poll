@@ -1,0 +1,9 @@
+{% extends "users/base.html" %}
+{% block title %}Profile Page{% endblock title %}
+{% block content %}
+        <h1>This is the profile page for {{user.username}}</h1>
+
+{% endblock content %}
+
+
+<h2>Hello IF YOU SEE THIS YOU ARE CONNECTED {{ request.user.username }}</h2>

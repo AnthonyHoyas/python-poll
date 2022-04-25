@@ -1,8 +1,6 @@
 from django.apps import AppConfig
 
 
-class PollsConfig(AppConfig):
+class ProfileConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'polls'
-
-
+    name = 'profile_'
