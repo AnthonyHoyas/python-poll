@@ -2,9 +2,11 @@
 {% block content %}
         <h1>This is the profile page for {{user.first_name}}</h1>
 
-{% endblock content %}
 
 
 <h2>Bio: {{ request.user.profile.bio }}</h2>
 
 <img src="http://localhost:8000/media/{{ user.profile.avatar }}" alt="aPicture">
+
+
+{% endblock %}
